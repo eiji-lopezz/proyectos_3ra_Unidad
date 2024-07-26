@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.drag-container {
+    width: 300px;
+    padding: 20px;
+    border: 2px dashed #ccc;
+    text-align: center;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+    /* Para el posicionamiento del spinner */
+}
+
+.drag-container.hover {
+    background-color: #f0f0f0;
+}
+
+.drag-item {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    line-height: 100px;
+    margin: 10px auto;
+    cursor: grab;
+    /* Cambiar cursor para indicar que es arrastrable */
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top-color: #4CAF50;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    display: none;
+    /* Ocultar por defecto */
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

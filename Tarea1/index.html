@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+    <div class="drag-container" ondragover="event.preventDefault()" ondragenter="event.target.classList.add('hover')"
+        ondragleave="event.target.classList.remove('hover')" ondrop="drop(event)">
+        <div class="loader" id="loader"></div>
+        Arrastra y suelta aquí
+    </div>
+
+    <div id="drag-items-container">
+        <div id="drag-item-1" class="drag-item" draggable="true" ondragstart="drag(event)">
+            Item 1
+        </div>
+        <div id="drag-item-2" class="drag-item" draggable="true" ondragstart="drag(event)">
+            Item 2
+        </div>
+        <!-- Puedes agregar más elementos aquí si lo deseas -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
